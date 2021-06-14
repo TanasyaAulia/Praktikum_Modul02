@@ -7,4 +7,6 @@ public class Mahasiswa {
     String nama;
     Date tanggalLahir;
 
+    }
+
 }
