@@ -10,6 +10,7 @@ public class MahasiswaBeraksi {
         String polaTanggal = "dd-MM-yyyy";
         SimpleDateFormat sdf = new SimpleDateFormat(polaTanggal);
 
+        //instance - pembuatan object
         Mahasiswa mahasiswa = new Mahasiswa();
         mahasiswa.npm = "19631105";
         mahasiswa.nama = "Tanasya";
@@ -17,7 +18,6 @@ public class MahasiswaBeraksi {
             mahasiswa.tanggalLahir = sdf.parse("17-01-2001");
             mahasiswa.tampilkanAtribut();
         } catch (ParseException e) {
-            e.printStackTrace();
             System.err.println("Format tanggal tidak sesuai");
         }
     }
