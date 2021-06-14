@@ -11,20 +11,12 @@ public class MahasiswaBeraksi {
         SimpleDateFormat sdf = new SimpleDateFormat(polaTanggal);
 
         //instance - pembuatan object
-        Mahasiswa mahasiswa = new Mahasiswa();
-        mahasiswa.npm = "19631105";
-        mahasiswa.nama = "Tanasya";
-        mahasiswa.tanggalLahir = sdf.parse("17-01-2001");
+        Mahasiswa mahasiswa = new Mahasiswa("19631105","Tanasya","17-01-2001");
+        mahasiswa.tampilkanAtribut();
+        mahasiswa.menyapa();
+        System.out.println("Usiaku : " + mahasiswa.hitungUsia() + " tahun");
 
-            mahasiswa.tampilkanAtribut();
-            mahasiswa.menyapa();
-            System.out.println("Usiaku : " + mahasiswa.hitungUsia() + " tahun");
-
-        Mahasiswa mahasiswa2 = new Mahasiswa();
-        mahasiswa2.npm = "19635001";
-        mahasiswa2.nama = "Aulia";
-        mahasiswa2.tanggalLahir = sdf.parse("07-07-2007");
-
+        Mahasiswa mahasiswa2 = new Mahasiswa("19635001","Aulia","07-07-2007");
         mahasiswa2.tampilkanAtribut();
         mahasiswa2.menyapa();
         System.out.println("Usiaku : " + mahasiswa2.hitungUsia() + " tahun");
