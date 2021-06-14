@@ -15,10 +15,7 @@ public class MahasiswaBeraksi {
         mahasiswa.nama = "Tanasya";
         try {
             mahasiswa.tanggalLahir = sdf.parse("17-01-2001");
-
-            System.out.println("Nama \t\t\t : " + mahasiswa.nama);
-            System.out.println("NPM \t\t\t : " + mahasiswa.npm);
-            System.out.println("Tanggal Lahir \t : " + sdf.format(mahasiswa.tanggalLahir));
+            mahasiswa.tampilkanAtribut();
         } catch (ParseException e) {
             e.printStackTrace();
             System.err.println("Format tanggal tidak sesuai");
