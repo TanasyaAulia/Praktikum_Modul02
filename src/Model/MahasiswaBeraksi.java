@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class MahasiswaBeraksi {
-    public static void main(String[]args) {
+    public static void main(String[]args) throws ParseException {
 
         String polaTanggal = "dd-MM-yyyy";
         SimpleDateFormat sdf = new SimpleDateFormat(polaTanggal);
@@ -14,11 +14,19 @@ public class MahasiswaBeraksi {
         Mahasiswa mahasiswa = new Mahasiswa();
         mahasiswa.npm = "19631105";
         mahasiswa.nama = "Tanasya";
-        try {
-            mahasiswa.tanggalLahir = sdf.parse("17-01-2001");
+        mahasiswa.tanggalLahir = sdf.parse("17-01-2001");
+
             mahasiswa.tampilkanAtribut();
-        } catch (ParseException e) {
-            System.err.println("Format tanggal tidak sesuai");
+            mahasiswa.menyapa();
+            System.out.println("Usiaku : " + mahasiswa.hitungUsia() + " tahun");
+
+        Mahasiswa mahasiswa2 = new Mahasiswa();
+        mahasiswa2.npm = "19635001";
+        mahasiswa2.nama = "Aulia";
+        mahasiswa2.tanggalLahir = sdf.parse("07-07-2007");
+
+        mahasiswa2.tampilkanAtribut();
+        mahasiswa2.menyapa();
+        System.out.println("Usiaku : " + mahasiswa2.hitungUsia() + " tahun");
         }
     }
-}

@@ -19,6 +19,9 @@ public class Mahasiswa {
             System.out.println("Tanggal Lahir \t : " + sdf.format(this.tanggalLahir));
             System.out.println("Usia : \t\t\t : " + hitungUsia());
     }
+    void menyapa(){
+        System.out.println("Hai nama Aku : " + this.nama);
+    }
     String getNama(){
         return nama;
     }
