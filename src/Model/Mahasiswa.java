@@ -8,12 +8,12 @@ import java.util.Date;
 
 public class Mahasiswa {
     String npm;
-    String nama;
+    public String nama;
     Date tanggalLahir;
     final String POLA_TANGGAL = "dd-MM-yyyy";
     final SimpleDateFormat sdf = new SimpleDateFormat(POLA_TANGGAL);
 
-    void tampilkanAtribut(){
+    public void tampilkanAtribut(){
             System.out.println("Nama \t\t\t : " + this.nama);
             System.out.println("NPM \t\t\t : " + this.npm);
             System.out.println("Tanggal Lahir \t : " + sdf.format(this.tanggalLahir));
@@ -60,4 +60,29 @@ public class Mahasiswa {
             System.out.println("Kesalahan pada Tanggal Lahir");
         }
     }
+
+    public String getNpm() {
+        return npm;
+    }
+
+    public void setNpm(String npm) {
+        this.npm = npm;
+    }
+
+    public String getNama() {
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    public Date getTanggalLahir() {
+        return tanggalLahir;
+    }
+
+    public void setTanggalLahir(Date tanggalLahir) {
+        this.tanggalLahir = tanggalLahir;
+    }
+
 }
